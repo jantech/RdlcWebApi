@@ -4,4 +4,4 @@ How to create RDLC report in and download pdf, excel, word file formats in Web A
 
 ## Youtube Video Tutorial
 
-[Full Tutorial Video (3 Hours)](https://youtu.be/43LsblIA-v4)
+[Full Tutorial Video](https://youtu.be/43LsblIA-v4)
