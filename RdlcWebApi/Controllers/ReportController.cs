@@ -20,11 +20,12 @@ namespace RdlcWebApi.Controllers
             _reportService = reportService;
         }
 
-        [HttpGet("{reportName}/{reportType}")]
-        public ActionResult Get(string reportName, string reportType)
+        [HttpGet("{reportName}/{reportType}/{lang}")]
+        public ActionResult Get(string reportName, string reportType, string lang)
         {
-            var reportFileByteString = _reportService.GenerateReportAsync(reportName, reportType);
-            return File(reportFileByteString, MediaTypeNames.Application.Octet, getReportName(reportName, reportType));
+            var reportNameWithLang = reportName + "_" + lang;
+            var reportFileByteString = _reportService.GenerateReportAsync(reportNameWithLang, reportType);
+            return File(reportFileByteString, MediaTypeNames.Application.Octet, getReportName(reportNameWithLang, reportType));
         }
 
 
